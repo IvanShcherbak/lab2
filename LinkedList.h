@@ -58,6 +58,16 @@ public:
     LinkedList (){
     }
 
+    ~LinkedList(){
+        element *element1 = head;
+        element *element = head;
+        while (element){
+            element1 = element;
+            element = element->next;
+            delete element1;
+        }
+    }
+
     LinkedList (const LinkedList <T> & list){
         element *element1 = list.head;
         for (int i = 0; i < list.len; ++i) {

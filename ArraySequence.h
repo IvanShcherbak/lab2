@@ -18,6 +18,10 @@ public:
         dynamicArray = DynamicArray<T>();
     }
 
+    ~ArraySequence(){
+        delete &dynamicArray;
+    }
+
     ArraySequence(const DynamicArray<T> & list){
         dynamicArray = DynamicArray<T>(list);
     }

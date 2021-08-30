@@ -19,6 +19,10 @@ public:
         linkedList = LinkedList();
     }
 
+    ~LinkedListSequence(){
+        delete &linkedList;
+    }
+
     LinkedListSequence(const LinkedList <T> & list ){
         linkedList = LinkedList(list);
     }

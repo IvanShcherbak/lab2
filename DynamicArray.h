@@ -29,6 +29,10 @@ public:
         }
     }
 
+    ~DynamicArray(){
+        delete array;
+    }
+
     DynamicArray(int size) {
         length = size;
         array = new T[size];
